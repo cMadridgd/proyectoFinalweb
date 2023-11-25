@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prysma PH</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/Panel.css">
+  </head>
+
+  <body>
+    <section class="login" id="login">
+      <img class="logo" src="./assets/img/logoPrysma.jpeg" alt="logo" />
+      <div class="container">
+        <h2>Prysma PH</h2>
+
+        <h4>Inicio</h4>
+        <form id="formLogin">
+          <input
+            class="controls"
+            type="text"
+            placeholder="Digite su usuario"
+            id="user"
+            name="user"
+            required
+          />
+          <p id="userError" class="oculto error">
+            Solo caracteres alfabeticos
+          </p>
+          <input
+            class="controls"
+            type="password"
+            placeholder="Digite la Contraseña"
+            id="password"
+            name="password"
+            required
+          />
+          <p id="passwordError" class="oculto error">
+            ingresar caracteres alfabeticos y numericos, mas de 5
+          </p>
+          <br />
+          <button  class="buttons" id="buttonlogIn" type="button">
+            Ingresar
+          </button>
+          <p class="error oculto" id="error">error de ingreso</p>
+          <p id="forgetPassword"><a href="#">¿Olvidastes tu Contraseña?</a></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="expends oculto" id="expends">
+      <div id="panel" class="panel">
+        <img class="logoBudget" src="/assets/img/logoPrysma.jpeg" alt="" />
+        <h1>controlador de gastos</h1>
+
+        <a href="/final gastos/index.html"><button class="singOff"><img class="singoffImg" src="/assets/img/cerrar-sesion.jpeg" alt="salir"></button></a>
+      </div>
+      <section class="enterBudget">
+        <div class="valBudgetInitial">
+            <label for="budgetInitial">ingrese su presupuesto inicial:</label>
+          <input id="inputEnterfigure" type="text" placeholder="valor a ingresar" />
+          <button id="buttonBudget" onclick="buttonBudget">Ingresar datos </button>
+        </div>
+        <div class="contenedor">
+        <div class="budget">
+          <p class="value" id="value"></p>
+          </div>
+          <div class="budget">
+          <p id="newValue"></p>
+        </div>
+    </div>
+      </section>
+      <div class="expendBox">
+
+            
+            <div class="box" id="diversion">
+              <h2>diversion</h2>
+        </div>
+            <div class="box" id="negocios">
+                <h2>negocios</h2>
+            </div>
+
+        <div class="box" id="alimentacion">
+          <h2>alimentacion</h2>
+          
+        </div>
+
+        <div class="box" id="transporte">
+            <h2>transporte</h2>
+          
+          </div>
+      </div>
+      <div class="formBox">
+        <form id="formexpense">
+          <section class="formInput">
+            <input
+              class="formInfoExpense"
+              type="text"
+              id="infoInput"
+              placeholder="Ingrese información del gasto"
+            />
+            <input
+              class="formInfoExpense"
+              type="number"
+              id="enterExpense"
+              placeholder="ingrese el valor"
+            />
+            <input
+              class="formInfoExpense"
+              type="text"
+              id="staff"
+              placeholder="nombre de la persona que hizo el gasto"
+            />
+            <input
+              class="formInfoExpense"
+              type="date"
+              id="date"
+              placeholder="fecha en la que se realizo el gasto"
+            />
+            <select
+              id="options"
+              name="options"
+              aria-label="Selecciona el tipo de gasto"
+            >
+            <option value="negocios"><a href="">Negocios</a></option>
+            <option value="diversion"><a href="">Diversion</a></option>
+            <option value="transporte"><a href="">Transporte</a></option>
+            <option value="alimentacion"><a href="">Alimentacion</a></option>
+            </select>
+            <button type="button" id="enterBtn">Guardar</button>
+        </section>
+        </form>
+      </div>
+    </section>
+
+    <script type="module" src="/controller/controllerPag.js"></script>
+    <script type="module" src="/controller/controllerContraseñas.js"></script>
+    <script type="module" src="./assets/js/login.js"></script>
+
+  </body>
+</html>
+
+        
